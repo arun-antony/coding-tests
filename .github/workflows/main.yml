@@ -1,4 +1,4 @@
-name: Lint Action
+name: Build Code
 on: 
   push:
     branches:
@@ -11,6 +11,11 @@ jobs:
     steps:
       - name: code-checkout
         uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin' # See 'Supported distributions' for available options
+          java-version: '17'
 
       - name: build
         run: ./gradlew build
