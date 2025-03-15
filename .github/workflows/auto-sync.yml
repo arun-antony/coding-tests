@@ -23,8 +23,8 @@ jobs:
       - name: Checkout Team Branch
         run: git checkout main-side-app
 
-      - name: Merge Master to Team Branch
-        run: git merge origin/master --no-edit
+      - name: Merge Main to Team Branch
+        run: git merge origin/main --no-edit
 
       - name: Push Changes to Team Branch
         run: git push origin main-side-app
