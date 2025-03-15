@@ -1,0 +1,13 @@
+name: auto-sync-main
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '*/5 * * * *'
+
+jobs:
+  auto_sync_job:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Job started"
+      - run: echo "Job in progress"
+      - run: echo "job ended"
