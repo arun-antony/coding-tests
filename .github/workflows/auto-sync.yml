@@ -2,7 +2,7 @@ name: auto-sync-main
 on:
   workflow_dispatch:
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '*/59 * * * *'
 
 jobs:
   auto_sync_job:
