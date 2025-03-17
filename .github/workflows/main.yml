@@ -1,5 +1,6 @@
 name: Build Code
 on: 
+  workflow_dispatch:
   push:
     branches:
       - main
@@ -12,6 +13,8 @@ jobs:
     steps:
       - name: code-checkout
         uses: actions/checkout@v4
+        with:
+          ref: 'samples/album-app'
 
       - uses: actions/setup-java@v4
         with:
